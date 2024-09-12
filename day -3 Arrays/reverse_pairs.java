@@ -35,8 +35,9 @@ class Solution{
         int cnt=0;
         for(int i=low;i<=mid;i++){
             while(right<=high && arr[i]>2*arr[right]){
-                cnt+=(right-(mid+1));
+                right++;
             }
+            cnt+=(right-(mid+1));
         }
         return cnt;
     }
